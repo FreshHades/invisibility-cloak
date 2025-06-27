@@ -10,7 +10,7 @@ def init_background(cap):
         _, bg = cap.read()
     bg = np.flip(bg, axis=1)
 
-capture_background(cv2.VideoCapture(0))
+init_background(cv2.VideoCapture(0))
 
 def apply_cloak_effect(frame):
     global bg
