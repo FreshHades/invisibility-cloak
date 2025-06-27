@@ -4,10 +4,10 @@ import numpy as np
 # Load background once
 bg = None
 
-def capture_background(cap):
+def init_background(cap):
     global bg
     for i in range(30):
-        ret, bg = cap.read()
+        _, bg = cap.read()
     bg = np.flip(bg, axis=1)
 
 capture_background(cv2.VideoCapture(0))
