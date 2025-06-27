@@ -4,6 +4,8 @@ import cloak
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
+cloak.init_background(camera)
+
 
 def gen_frames():
     while True:
